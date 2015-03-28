@@ -1,5 +1,6 @@
 var moment =require('moment');
 var selectionSort = require('./lib/selectionSort');
+var insertionSort = require('./lib/insertionSort');
 var _ = require('lodash');
 
 var arrayToSort = [];
@@ -11,4 +12,5 @@ for(var i = 0 ; i < NUMBER_OF_THE_ARRAY_TO_SORT ; i++){
 	arrayToSort.push(_.random(9999));
 }
 
-console.log(selectionSort.sort(arrayToSort));
+selectionSort.sort(arrayToSort);
+insertionSort.sort(arrayToSort);
