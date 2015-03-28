@@ -11,7 +11,6 @@ selectionSort.sort = (arrToSort) ->
         tmp = arrToSort[i]
         arrToSort[i] = arrToSort[j]
         arrToSort[j] = tmp
-    console.log arrToSort
 
   console.log "选择排序：消耗了: " + (moment() - timeStart) + "ms"
   arrToSort
