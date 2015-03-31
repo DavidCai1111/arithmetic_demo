@@ -1,4 +1,5 @@
-var _ = require('lodash');
+var randomArr = require("./lib/arrUtil/randomArr");
+var arr = randomArr.init();
 var Usecoffe = true;
 
 if(Usecoffe){
@@ -15,35 +16,13 @@ if(Usecoffe){
 	var quickSort = require('./lib/quickSort');
 }
 
-var arrayToSort = [];
-
-//生成的随机数数组的长度
-var NUMBER_OF_THE_ARRAY_TO_SORT = 10;
-//生成的随机数的范围
-var RANGE_OF_RANDOM_NUMBER = 20;
-
-for(var i = 0 ; i < NUMBER_OF_THE_ARRAY_TO_SORT ; i++){
-	arrayToSort.push(_.random(RANGE_OF_RANDOM_NUMBER));
-}
-
-var arrayToSort = [];
-
-//生成的随机数数组的长度
-var NUMBER_OF_THE_ARRAY_TO_SORT = 10;
-//生成的随机数的范围
-var RANGE_OF_RANDOM_NUMBER = 20;
-
-for(var i = 0 ; i < NUMBER_OF_THE_ARRAY_TO_SORT ; i++){
-		arrayToSort.push(_.random(RANGE_OF_RANDOM_NUMBER));
-	}
-
 //选择排序
-selectionSort.sort(arrayToSort);
+selectionSort.sort(randomArr.get(arr()));
 //直接插入排序
-insertionSort.sort(arrayToSort);
+insertionSort.sort(randomArr.get(arr()));
 //希尔排序(使用序列: 1/2(3^k - 1))
-shellSort.sort(arrayToSort);
+shellSort.sort(randomArr.get(arr()));
 //原地归并排序
-mergeSort.sort(arrayToSort);
+mergeSort.sort(randomArr.get(arr()));
 //快速排序
-quickSort.sort(arrayToSort);
+quickSort.sort(randomArr.get(arr()));
