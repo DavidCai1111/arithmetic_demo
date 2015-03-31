@@ -16,7 +16,7 @@ shellSort.sort = (arrToSort) ->
           exchange arrToSort,j,(j-h)
     h = (h-1)/3
 
-  console.log "希尔排序(使用序列: 1/2(3^k - 1) )：消耗了: " + (moment() - timeStart) + "ms"
+  console.log "希尔排序(使用序列: 1/2(3^k - 1) )：消耗了:#{(moment() - timeStart)}ms"
   arrToSort
 
 
