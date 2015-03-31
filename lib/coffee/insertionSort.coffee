@@ -17,7 +17,7 @@ insertionSort.sort = (arrToSort) ->
       else
         break
 
-  console.log "直接插入排序：消耗了: " + (moment() - timeStart) + "ms"
+  console.log "直接插入排序：消耗了 " + (moment() - timeStart) + "ms"
   arrSorted
 
 module.exports = insertionSort

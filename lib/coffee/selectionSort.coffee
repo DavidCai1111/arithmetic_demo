@@ -12,7 +12,7 @@ selectionSort.sort = (arrToSort) ->
         arrToSort[i] = arrToSort[j]
         arrToSort[j] = tmp
 
-  console.log "选择排序：消耗了: " + (moment() - timeStart) + "ms"
+  console.log "选择排序消耗了: " + (moment() - timeStart) + "ms"
   arrToSort
 
 module.exports = selectionSort
