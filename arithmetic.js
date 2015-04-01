@@ -19,7 +19,9 @@ if(Usecoffe){
 }
 
 //数据结构
-var PriorityQueue = require('./lib/coffee_dest/priorityQueue');
+var getPriorityQueue = require('./lib/coffee_dest/PriorityQueue');
+//二叉树
+var getBinaytTree = require('./lib/coffee_dest/BinaryTree');
 
 //选择排序
 selectionSort.sort(randomArr.get(arr()));
@@ -33,7 +35,7 @@ mergeSort.sort(randomArr.get(arr()));
 quickSort.sort(randomArr.get(arr()));
 //使用优先队列找出最小的五个数
 (function(len){
-	var priorityQueue = PriorityQueue(len);
+	var priorityQueue = getPriorityQueue(len);
 	var timeStart = moment();
 	for(var i = 0 ; i < randomArr.get(arr()).length ; i++){
 		priorityQueue.insert(randomArr.get(arr())[i]);
@@ -41,3 +43,14 @@ quickSort.sort(randomArr.get(arr()));
 	console.log("构建长度为" + len + "的优先队列消耗了" + (moment() - timeStart) + "ms，输入中最小的" + len +"个数为:");
 	return console.log(priorityQueue.getQue());
 }(5));
+//使用二叉树找出最大的数
+(function () {
+	var binaryTree = getBinaytTree();
+	var timeStart = moment();
+	for(var i = 0 ; i < randomArr.get(arr()).length ; i++){
+		binaryTree.insert(randomArr.get(arr())[i]);
+	}
+
+	console.log("构建二叉树消耗了" + (moment() - timeStart) + "ms，输入中最大的数为:" + binaryTree.getMax());
+
+}());
