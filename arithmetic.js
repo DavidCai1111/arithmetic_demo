@@ -1,7 +1,9 @@
+var moment = require("moment");
 var randomArr = require("./lib/arrUtil/randomArr");
 var arr = randomArr.init();
 var Usecoffe = true;
 
+//排序算法
 if(Usecoffe){
 	var selectionSort = require('./lib/coffee_dest/selectionSort');
 	var insertionSort = require('./lib/coffee_dest/insertionSort');
@@ -16,6 +18,9 @@ if(Usecoffe){
 	var quickSort = require('./lib/quickSort');
 }
 
+//数据结构
+var PriorityQueue = require('./lib/coffee_dest/priorityQueue');
+
 //选择排序
 selectionSort.sort(randomArr.get(arr()));
 //直接插入排序
@@ -26,3 +31,13 @@ shellSort.sort(randomArr.get(arr()));
 mergeSort.sort(randomArr.get(arr()));
 //快速排序
 quickSort.sort(randomArr.get(arr()));
+//使用优先队列找出最小的五个数
+(function(len){
+	var priorityQueue = PriorityQueue(len);
+	var timeStart = moment();
+	for(var i = 0 ; i < randomArr.get(arr()).length ; i++){
+		priorityQueue.insert(randomArr.get(arr())[i]);
+	}
+	console.log("构建长度为" + len + "的优先队列消耗了" + (moment() - timeStart) + "ms，输入中最小的" + len +"个数为:");
+	return console.log(priorityQueue.getQue());
+}(5));
