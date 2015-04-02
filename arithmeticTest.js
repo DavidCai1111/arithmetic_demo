@@ -1,24 +1,16 @@
+//计时用
 var moment = require("moment");
+//获取随机数的数组
 var randomArr = require("./lib/arrUtil/randomArr");
 var arr = randomArr.init();
-var Usecoffe = true;
 
 //排序算法
-if(Usecoffe){
-	var selectionSort = require('./lib/coffee_dest/selectionSort');
-	var insertionSort = require('./lib/coffee_dest/insertionSort');
-	var shellSort = require('./lib/coffee_dest/shellSort');
-	var mergeSort = require('./lib/coffee_dest/mergeSort');
-	var quickSort = require('./lib/coffee_dest/quickSort');
-}else{
-	var selectionSort = require('./lib/selectionSort');
-	var insertionSort = require('./lib/insertionSort');
-	var shellSort = require('./lib/shellSort');
-	var mergeSort = require('./lib/mergeSort');
-	var quickSort = require('./lib/quickSort');
-}
-
-//数据结构
+var selectionSort = require('./lib/coffee_dest/selectionSort');
+var insertionSort = require('./lib/coffee_dest/insertionSort');
+var shellSort = require('./lib/coffee_dest/shellSort');
+var mergeSort = require('./lib/coffee_dest/mergeSort');
+var quickSort = require('./lib/coffee_dest/quickSort');
+//优先队列
 var getPriorityQueue = require('./lib/coffee_dest/PriorityQueue');
 //二叉树
 var getBinaytTree = require('./lib/coffee_dest/BinaryTree');
