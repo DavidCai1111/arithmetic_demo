@@ -1,7 +1,7 @@
 //计时用
 var moment = require("moment");
 //获取随机数的数组
-var randomArr = require("./lib/arrUtil/randomArr");
+var randomArr = require("./lib/coffee_dest/arrUtil/randomArr");
 var arr = randomArr.init();
 
 //排序算法
