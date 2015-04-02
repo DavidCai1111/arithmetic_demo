@@ -1,5 +1,5 @@
 moment = require 'moment'
-exchange = require '../arrUtil/exchange'
+exchange = require './arrUtil/exchange'
 
 shellSort = {}
 
