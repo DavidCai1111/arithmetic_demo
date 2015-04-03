@@ -19,6 +19,7 @@ class HashTable
     result.ele = null
     ele = null
     if arrInSide[hashCode] == undefined
+      result.count += 1
       result
     else
       for ele in arrInSide[hashCode]
