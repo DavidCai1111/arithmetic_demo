@@ -3,12 +3,12 @@ class PriorityQueue
 
   constructor:(@len) ->
 
-  insert:(value) ->
+  insert:(theValue) ->
     if queue.length == @len
-      queue.push(value)
+      queue.push(theValue)
       queue.splice @maxIndex(),1
     else
-      queue.push(value)
+      queue.push(theValue)
 
   size:() ->
     @len
