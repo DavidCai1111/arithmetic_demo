@@ -1,23 +1,34 @@
 var gulp = require('gulp');
 var coffee = require('gulp-coffee');
 
-var coffee_src = "./lib/coffee/*.coffee";
-var coffee_dest = "./lib/coffee_dest";
-var coffee_arrUtilSrc = "./lib/coffee/arrUtil/*.coffee";
-var coffee_arrUtilDest = "./lib/coffee_dest/arrUtil";
+var coffeeConfig = {
+	arithSrc:"./lib/coffee/*.coffee",
+	arithDest:"./lib/coffee_dest",
+	arrUtilSrc:"./lib/coffee/arrUtil/*.coffee",
+	arrUtilDest:"./lib/coffee_dest/arrUtil",
+	rootPathFileSrc:"./*.coffee",
+	rootPathFileDest:"./"
+};
 
 gulp.task('coffee_make',function(){
 	gulp
-		.src(coffee_src)
+		.src(coffeeConfig.arithSrc)
 		.pipe(coffee())
-		.pipe(gulp.dest(coffee_dest))
+		.pipe(gulp.dest(coffeeConfig.arithDest));
 });
 
 gulp.task('coffee_arrUtil_make',function(){
 	gulp
-		.src(coffee_arrUtilSrc)
+		.src(coffeeConfig.arrUtilSrc)
 		.pipe(coffee())
-		.pipe(gulp.dest(coffee_arrUtilDest));
+		.pipe(gulp.dest(coffeeConfig.arrUtilDest));
 });
 
-gulp.task('default',['coffee_make','coffee_arrUtil_make']);
+gulp.task('coffee_rootPathFile_make',function(){
+	gulp
+		.src(coffeeConfig.rootPathFileSrc)
+		.pipe(coffee())
+		.pipe(gulp.dest(coffeeConfig.rootPathFileDest));
+});
+
+gulp.task('default',['coffee_make','coffee_arrUtil_make','coffee_rootPathFile_make']);
