@@ -5,7 +5,7 @@ quickSort = {}
 quickSort.sort = (arrToSort) ->
   timeStart = moment()
   arrSorted = this.innerSort arrToSort
-  console.log "快速排序V2：消耗了:#{(moment() - timeStart)}ms"
+  console.log "快速排序：消耗了:#{(moment() - timeStart)}ms"
   arrSorted
 
 quickSort.innerSort = (arrToSort) ->
@@ -18,9 +18,9 @@ quickSort.innerSort = (arrToSort) ->
   v = arrToSort[0]
   for i in [1..(arrToSort.length - 1)]
     if arrToSort[i] <= v
-      left.push(arrToSort[i])
+      left.push arrToSort[i]
     else
-      right.push(arrToSort[i])
-  this.innerSort(left).concat(v,this.innerSort(right))
+      right.push arrToSort[i]
+  this.innerSort(left).concat v,this.innerSort(right)
 
 module.exports = quickSort
