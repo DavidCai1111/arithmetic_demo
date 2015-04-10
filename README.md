@@ -1,6 +1,6 @@
 # arithmetic_demo
 
-## 各种算法demo(CoffeeScript)
+## 一些算法demo(CoffeeScript)
 
 __已有列表:__
 
