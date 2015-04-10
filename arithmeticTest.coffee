@@ -8,6 +8,7 @@ selectionSort = require './lib/coffee_dest/selectionSort'
 insertionSort = require './lib/coffee_dest/insertionSort'
 shellSort = require './lib/coffee_dest/shellSort'
 mergeSort = require './lib/coffee_dest/mergeSort'
+bubbleSort = require './lib/coffee_dest/bubbleSort'
 quickSort = require './lib/coffee_dest/quickSort'
 #优先队列
 getPriorityQueue = require './lib/coffee_dest/PriorityQueue'
@@ -30,6 +31,8 @@ insertionSort.sort randomArr.get arr()
 shellSort.sort randomArr.get arr()
 #原地归并排序
 mergeSort.sort randomArr.get arr()
+#冒泡排序
+bubbleSort.sort randomArr.get arr()
 #快速排序
 quickSort.sort randomArr.get arr()
 
