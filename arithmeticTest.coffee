@@ -21,7 +21,7 @@ getHashTable = require './lib/coffee_dest/HashTable'
 #配置
 config = require './config'
 
-console.log "输入为一个长度为#{config.NUMBER_OF_THE_ARRAY_TO_SORT},范围为#{config.RANGE_OF_RANDOM_NUMBER}的数组"
+console.log "输入为一个长度为#{config.NUMBER_OF_THE_ARRAY_TO_SORT},范围为0到#{config.RANGE_OF_RANDOM_NUMBER}的数组"
 
 #选择排序
 selectionSort.sort randomArr.get arr()
